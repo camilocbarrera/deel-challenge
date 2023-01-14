@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: raw_deel
+    description: raw deel.
+    database: deel_analytics
+    schema: src_raw_globepay
+
+    tables:
+      - name: globepay_acceptance_report
+        description: "GLOBEPAY ACCEPTANCE REPORT"
+        columns:
+          - name: external_ref
+          - name: status
+          - name: source
+          - name: ref
+          - name: date_time
+          - name: state
+          - name: cvv_provided
+          - name: amount
+          - name: country
+          - name: currency
+          - name: rates
+
+      - name: globepay_chargeback_report
+        description: "GLOBEPAY CHARGEBACK REPORT raw table"
+        columns:
+          - name: external_ref
+          - name: status
+          - name: source
+          - name: chargeback
+

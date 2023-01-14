@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_globepay__acceptance_report
+    description: "STG GLOBEPAY ACCEPTANCE REPORT - GLOBEPAY ACCEPTANCE REPORT"
+
+
+
+
+  - name: stg_globepay__chargeback_report
+    description: "STG  GLOBEPAY CHARGEBACK REPORT - GLOBEPAY CHARGEBACK REPORT"
+
