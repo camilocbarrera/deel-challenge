@@ -7,6 +7,15 @@ SELECT
    , stg_globepay__acceptance_report.state             AS state
    , stg_globepay__acceptance_report.cvv_provided      AS cvv_provided
    , stg_globepay__acceptance_report.amount            AS amount
+   , CASE
+               WHEN currency = 'AUD' THEN ( amount / rate_aud )
+               WHEN currency = 'CAD' THEN ( amount / rate_cad )
+               WHEN currency = 'EUR' THEN ( amount / rate_eur )
+               WHEN currency = 'GBP' THEN ( amount / rate_gbp )
+               WHEN currency = 'MXN' THEN ( amount / rate_mxn )
+               WHEN currency = 'SGD' THEN ( amount / rate_sgd )
+               WHEN currency = 'USD' THEN ( amount / rate_usd )
+               END AS amount_usd
    , stg_globepay__acceptance_report.country           AS country
    , stg_globepay__acceptance_report.currency          AS currency
    , stg_globepay__acceptance_report.rates             AS rates
